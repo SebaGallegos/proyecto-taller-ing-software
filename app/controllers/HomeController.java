@@ -1,22 +1,43 @@
 package controllers;
 
+import models.User;
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.*;
+import play.i18n.MessagesApi;
 
-/**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
- */
-public class HomeController extends Controller {
+import javax.inject.Inject;
 
-    /**
-     * An action that renders an HTML page with a welcome message.
-     * The configuration in the <code>routes</code> file means that
-     * this method will be called when the application receives a
-     * <code>GET</code> request with a path of <code>/</code>.
-     */
-    public Result index() {
+public class HomeController extends Controller{
+
+    private final Form<UserProcess> form;
+    private MessagesApi messagesApi;
+
+    @Inject
+    public HomeController(FormFactory formFactory, MessagesApi messagesApi){
+        this.form = formFactory.form(UserProcess.class);
+        this.messagesApi = messagesApi;
+    }
+
+    public Result index(){
         return ok(views.html.index.render());
     }
-    public Result ejemplo(){ return ok(views.html.ejemplo.render()); }
 
+    public Result listForm(Http.Request request){
+        return ok(views.html.form.render(form, request, messagesApi.preferred(request)));
+    }
+
+    public Result createUser(Http.Request request){
+        String name = request.body().asFormUrlEncoded().get("name")[0];
+        String email = request.body().asFormUrlEncoded().get("email")[0];
+
+        User user = new User();
+
+        user.name = name;
+        user.email = email;
+
+        user.save();
+
+        return redirect(routes.HomeController.index());
+    }
 }
