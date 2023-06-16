@@ -1,13 +1,21 @@
 @import play.mvc.Http.Request
 @(form: Form[UserProcess])(implicit request: Request, messages: play.i18n.Messages)
 
-@main("Formulario"){
-    <h1>Formulario</h1>
 
-    @helper.form(routes.HomeController.createUser){
-        @helper.CSRF.formField
-        @helper.inputText(form("name"))
-        @helper.inputText(form("email"))
-        <button type="submit">Ingresar</button>
-    }
+@main("Formulario"){
+<form action="@routes.HomeController.createUser" method="post">
+    @helper.CSRF.formField
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email">
+        <div class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</form>
 }
+
+
