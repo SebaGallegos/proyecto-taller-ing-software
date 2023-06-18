@@ -3,19 +3,50 @@
 
 
 @main("Formulario"){
-<form action="@routes.HomeController.createUser" method="post">
-    @helper.CSRF.formField
-    <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" name="name">
+<div class="container">
+    <div class="card">
+        <div class="p-4">
+        <h1>Inicio de Sesión</h1>
+
+            <form action="@routes.HomeController.createUser" method="post" class="center-form">
+                @helper.CSRF.formField
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <div class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
+                </div>
+            <button type="submit" class="btn btn-personal">Ingresar</button>
+            </form>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" name="email">
-        <div class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
-    </div>
-    <button type="submit" class="btn btn-dark">Ingresar</button>
-</form>
+</div>
+<style>
+    .btn-personal:active {
+        background-color: blue;
+        color: azure;
+    }
+    .btn-personal:hover {
+        background-color: blue;
+        color: azure;
+    }
+    .btn-personal{
+        background-color: blueviolet;
+        color: azure;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Opcional: ajusta la altura según tus necesidades */
+    }
+
+    .center-form {
+        width: 600px; /* Opcional: ajusta el ancho según tus necesidades */
+    }
+</style>
+
 }
-
-

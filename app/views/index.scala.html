@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <a class="navbar-brand">Navbar</a>
     <form class="d-flex" role="search">
-      <a class="btn btn-dark" href="@routes.HomeController.listForm()" role="button">Login</a>
+      <a class="btn btn-personal" href="@routes.HomeController.listForm()" role="button">Login</a>
     </form>
   </div>
 </nav>
@@ -20,7 +20,7 @@
       <div class="card-body">
         <h5 class="card-title">Juguete Telefono</h5>
         <p class="card-text">Se espera porder realizar este juguete con materiales de plastico corrosivo.</p>
-        <a href="#" class="btn btn-dark">Ver Detalles</a>
+        <a href="#" class="btn btn-personal">Ver Detalles</a>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
     <div class="card-body">
       <h5 class="card-title">Diseño Spiderman</h5>
       <p class="card-text">Este diseño se espera que sea realizado en buenos materiales y en arta cantidad.</p>
-      <a href="#" class="btn btn-dark">Ver Detalles</a>
+      <a href="#" class="btn btn-personal">Ver Detalles</a>
     </div>
   </div>
   </div>
@@ -40,11 +40,26 @@
     <div class="card-body">
       <h5 class="card-title">Leon guerrero - Figura en miniatura</h5>
       <p class="card-text">Se espera una alta definicion en los detalles del plastico.</p>
-      <a href="#" class="btn btn-dark">Ver Detalles</a>
+      <a href="#" class="btn btn-personal">Ver Detalles</a>
     </div>
   </div>
   </div>
 </div>
+<style>
+    .btn-personal:active {
+        background-color: blue;
+        color: azure;
+    }
+    .btn-personal:hover {
+        background-color: blue;
+        color: azure;
+    }
+    .btn-personal{
+        background-color: blueviolet;
+        color: azure;
+    }
+
+</style>
 
 }
 
