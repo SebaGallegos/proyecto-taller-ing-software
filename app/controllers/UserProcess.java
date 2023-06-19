@@ -3,19 +3,11 @@ package controllers;
 import play.data.validation.Constraints;
 
 public class UserProcess {
-    @Constraints.Required protected String name;
-    protected String email;
+    @Constraints.Required protected String email;
+    protected String password;
 
     public UserProcess(){
 
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setEmail(String email) {
@@ -24,6 +16,14 @@ public class UserProcess {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
 }

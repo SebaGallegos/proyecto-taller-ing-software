@@ -23,18 +23,18 @@ public class HomeController extends Controller{
         return ok(views.html.index.render());
     }
 
-    public Result listForm(Http.Request request){
-        return ok(views.html.form.render(form, request, messagesApi.preferred(request)));
+    public Result login(Http.Request request){
+        return ok(views.html.login.render(form, request, messagesApi.preferred(request)));
     }
 
     public Result createUser(Http.Request request){
-        String name = request.body().asFormUrlEncoded().get("name")[0];
         String email = request.body().asFormUrlEncoded().get("email")[0];
+        String password = request.body().asFormUrlEncoded().get("password")[0];
 
         User user = new User();
 
-        user.name = name;
         user.email = email;
+        user.password = password;
 
         user.save();
 

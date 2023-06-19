@@ -6,7 +6,7 @@
 GET     /                           controllers.HomeController.index()
 
 # Formularios
-GET     /form                       controllers.HomeController.listForm(request: Request)
+GET     /login                       controllers.HomeController.login(request: Request)
 POST    /submit                     controllers.HomeController.createUser(request: Request)
 
 # productos
