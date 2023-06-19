@@ -3,8 +3,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<nav class="navbar" style="background-color: #438FA7;">
+<body class="fondo">
+<nav class="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="@routes.HomeController.index()">Navbar</a>
         <form class="d-flex" role="search">
@@ -20,7 +20,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                height: 87vh; /* Ajusta la altura según tus necesidades */
+                height: 90vh; /* Ajusta la altura según tus necesidades */
             }
             .container2 {
                 display: flex;
@@ -49,14 +49,14 @@
     </style>
 </head>
 
-<body>
+
     <div>
         <div style="display: flex; align-items: flex-start;">
             <picture>
                 <source srcset="@routes.Assets.versioned("images/toy.jpg")" type="image/svg+xml">
                 <img src="@routes.Assets.versioned("images/toy.jpg")" class="img-fluid img-thumbnail" alt="...">
             </picture>
-            <div class="container">
+            <div class="container texto">
                 <h5 class="title" style="margin-top: 0;">Telefono Juguete</h5>
                 <p>¡Hola a todos los fabricantes chinos de juguetes!<br><br>
                     En nombre de nuestra empresa Telefono Juguete y en colaboración con nuestra plataforma de comercio electrónico "Nombre de la pagina", nos complace anunciar que estamos buscando un fabricante confiable y experimentado para crear un teléfono de juguete único y atractivo destinado al mercado infantil.<br><br>
@@ -70,46 +70,15 @@
                     Agradeceríamos que adjuntaran ejemplos o muestras de productos anteriores, así como cualquier información adicional que crean relevante para evaluar su capacidad y calidad.<br><br>
                     Esperamos con entusiasmo recibir sus cotizaciones y ofertas para este emocionante proyecto. <br><br>
                     ¡Gracias por su atención y esperamos una colaboración exitosa!</p>
+                <div class="container2">
+                    <button class="btn btn-personal" id="button">Enviar Oferta</button>
+                </div>
             </div>
-        </div>
-        <div class="container2">
-            <button class="btn btn-personal">Enviar Oferta</button>
         </div>
     </div>
 </body>
 
 </html>
-
-<!--
-<div class="card mb-3" >
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img src="@routes.Assets.versioned("images/toy.jpg")" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">Telefono Juguete</h5>
-                <p class="card-text">¡Hola a todos los fabricantes chinos de juguetes!<br><br>
-                    En nombre de nuestra empresa Telefono Juguete y en colaboración con nuestra plataforma de comercio electrónico "Nombre de la pagina", nos complace anunciar que estamos buscando un fabricante confiable y experimentado para crear un teléfono de juguete único y atractivo destinado al mercado infantil.<br><br>
-                    Estamos interesados en recibir cotizaciones y ofertas de diversas empresas chinas de fabricación de juguetes. A continuación, detallamos los requisitos y características clave que buscamos para este emocionante proyecto:<br><br>
-                    Diseño llamativo y seguro: Necesitamos un diseño atractivo que capture la atención de los niños. La seguridad es nuestra principal preocupación, por lo que el producto debe cumplir con las normas internacionales de seguridad y utilizar materiales no tóxicos y duraderos.<br><br>
-                    Funcionalidad interactiva: Queremos que el teléfono de juguete ofrezca una variedad de características interactivas que promuevan el aprendizaje y el desarrollo cognitivo. Esto puede incluir juegos educativos, música, efectos de sonido y voz interactiva para estimular la imaginación y el aprendizaje creativo de los niños.<br><br>
-                    Tecnología intuitiva y accesible: El teléfono de juguete debe tener una interfaz sencilla y fácil de usar, adaptada a las habilidades motoras de los niños. Consideraremos la posibilidad de incluir una pantalla táctil de baja resolución y botones grandes para garantizar una experiencia interactiva satisfactoria.<br><br>
-                    Duración de la batería: Es importante que el teléfono de juguete tenga una batería de larga duración para que los niños puedan disfrutar de largos periodos de juego sin interrupciones. Buscamos una duración de batería óptima sin comprometer la calidad ni la funcionalidad del producto.<br><br>
-                    Personalización y conectividad: Nos gustaría explorar la opción de permitir la personalización del teléfono de juguete, como la selección de colores o la inclusión de personajes populares entre los niños. También consideraremos la posibilidad de incluir una conexión inalámbrica para ampliar las opciones de entretenimiento y aprendizaje.<br><br>
-                    Si su empresa tiene experiencia en la fabricación de juguetes y puede cumplir con nuestros requisitos, nos encantaría recibir su cotización. Por favor, incluyan detalles sobre los servicios que ofrecen, como diseño, producción, embalaje y plazos de entrega.<br><br>
-                    Agradeceríamos que adjuntaran ejemplos o muestras de productos anteriores, así como cualquier información adicional que crean relevante para evaluar su capacidad y calidad.<br><br>
-                    Esperamos con entusiasmo recibir sus cotizaciones y ofertas para este emocionante proyecto. <br><br>
-                    ¡Gracias por su atención y esperamos una colaboración exitosa!</p>
-                <div class="container2">
-                    <button class="btn btn-personal">Enviar Oferta</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
--->
 
 
 

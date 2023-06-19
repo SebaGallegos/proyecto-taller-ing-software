@@ -1,0 +1,60 @@
+#button:active:focus{
+    background-color: blue;
+    color: azure;
+}
+#button:hover {
+    background-color: blueviolet;
+    color: azure;
+}
+#button{
+    background-color:blue ;
+    color: azure;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcional: ajusta la altura según tus necesidades */
+}
+
+.center-form {
+    width: 600px; /* Opcional: ajusta el ancho según tus necesidades */
+}
+.fondo {
+    background-image: url('../images/fondo1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0); /* Cambia el color de fondo a negro con 50% de transparencia */
+
+}
+.card{
+    background: rgb(2,0,36);
+    background: linear-gradient(265deg, rgba(2,0,36,1) 0%, rgba(171,178,40,1) 0%, rgba(217,165,165,0.23993347338935578) 26%, rgba(0,212,255,1) 94%);
+    border: 2px solid rgb(15, 209, 232);
+}
+
+
+.texto{
+    color: #000000;
+    background: rgb(2,0,36);
+    background: linear-gradient(265deg, rgba(2,0,36,1) 0%, rgba(171,178,40,1) 0%, rgba(217,165,165,1) 26%, rgba(0,212,255,1) 94%);
+    padding: 10px; /* Aumenta el tamaño del fondo agregando un relleno de 10px */
+    border-radius: 10px; /* Agrega bordes redondeados de 10px */
+}
+
+.navbar-brand {
+    color: #FFFFFF; /* Cambia el color del enlace a blanco */
+    font-weight: bold; /* Aplica un grosor adicional a la letra */
+
+}
+.navbar-brand:hover{
+    color: #FFFFFF;
+}
+.navbar-brand:active,
+.navbar-brand:focus {
+    color: #FFFFFF; /* Cambia el color del enlace a blanco */
+}

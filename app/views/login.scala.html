@@ -2,6 +2,7 @@
 @(form: Form[UserProcess])(implicit request: Request, messages: play.i18n.Messages)
 
 @main("Inicio de sesión"){
+<body class="fondo">
 <div class="container">
     <div class="card">
         <div class="p-4">
@@ -18,34 +19,10 @@
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <div class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
-                <button type="submit" class="btn btn-personal">Ingresar</button>
+                <button type="submit" class="btn btn-personal" id="button">Ingresar</button>
             </form>
         </div>
     </div>
 </div>
-<style>
-    .btn-personal:active:focus {
-        background-color: blue;
-        color: azure;
-    }
-    .btn-personal:hover {
-        background-color: blueviolet;
-        color: azure;
-    }
-    .btn-personal{
-        background-color:blue ;
-        color: azure;
-    }
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Opcional: ajusta la altura según tus necesidades */
-    }
-
-    .center-form {
-        width: 600px; /* Opcional: ajusta el ancho según tus necesidades */
-    }
-</style>
-
+</body>
 }

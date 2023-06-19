@@ -2,12 +2,12 @@
 
 @main("Formulario"){
 
-
-<nav class="navbar" style="background-color: #438FA7;">
+<body class="fondo">
+<nav class="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="@routes.HomeController.index()">Navbar</a>
         <form class="d-flex" role="search">
-            <a class="btn btn-personal" href="@routes.HomeController.login()" role="button">Login</a>
+            <a class="btn btn-personal" href="@routes.HomeController.login()" role="button" id="button">Login</a>
         </form>
     </div>
 </nav>
@@ -22,7 +22,7 @@
       <div class="card-body">
         <h5 class="card-title">Juguete Telefono</h5>
         <p class="card-text">Se espera porder realizar este juguete con materiales de plastico corrosivo.</p>
-        <a href="@routes.RoutesController.phone()" class="btn btn-personal">Ver Detalles</a>
+        <a href="@routes.RoutesController.phone()" class="btn btn-personal" id="button">Ver Detalles</a>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
     <div class="card-body">
       <h5 class="card-title">Armadura de Iron Spider</h5>
       <p class="card-text">Este diseño se espera que sea realizado en buenos materiales y en arta cantidad.</p>
-      <a href="@routes.RoutesController.spidey()" class="btn btn-personal">Ver Detalles</a>
+      <a href="@routes.RoutesController.spidey()" class="btn btn-personal" id="button">Ver Detalles</a>
     </div>
   </div>
   </div>
@@ -42,26 +42,12 @@
     <div class="card-body">
       <h5 class="card-title">Leon guerrero - Figura en miniatura</h5>
       <p class="card-text">Se espera una alta definicion en los detalles del plastico.</p>
-      <a href="@routes.RoutesController.leon()" class="btn btn-personal">Ver Detalles</a>
+      <a href="@routes.RoutesController.leon()" class="btn btn-personal" id="button">Ver Detalles</a>
     </div>
   </div>
   </div>
 </div>
-<style>
-    .btn-personal:active:focus {
-        background-color: blue;
-        color: azure;
-    }
-    .btn-personal:hover {
-        background-color: blueviolet;
-        color: azure;
-    }
-    .btn-personal{
-        background-color:blue ;
-        color: azure;
-    }
-
-</style>
+</body>
 
 }
 
