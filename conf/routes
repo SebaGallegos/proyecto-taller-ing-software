@@ -4,10 +4,12 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
+GET     /index                      controllers.HomeController.index()
 
 # Formularios
-GET     /login                       controllers.HomeController.login(request: Request)
-POST    /submit                     controllers.HomeController.createUser(request: Request)
+GET     /login                       controllers.LoginController.showLoginForm(request: Request)
+POST    /login                       controllers.LoginController.processLogin(request: Request)
+GET     /logout                      controllers.LoginController.logout(request: Request)
 
 # productos
 GET     /detalle                    controllers.RoutesController.phone()

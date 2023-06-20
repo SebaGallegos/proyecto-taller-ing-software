@@ -8,7 +8,7 @@
         <div class="p-4">
         <h1>Inicio de Sesión</h1>
 
-            <form action="@routes.HomeController.createUser()" method="post" class="center-form">
+            <form action="@routes.LoginController.processLogin()" method="post" class="center-form">
                 @helper.CSRF.formField
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo electrónico</label>

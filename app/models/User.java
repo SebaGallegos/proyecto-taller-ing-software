@@ -1,10 +1,7 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-import io.ebean.Finder;
-import io.ebean.Model;
+import javax.persistence.*;
+import io.ebean.*;
 
 @Entity
 public class User extends Model{
