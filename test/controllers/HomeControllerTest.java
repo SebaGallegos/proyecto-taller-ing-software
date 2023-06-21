@@ -29,4 +29,14 @@ public class HomeControllerTest extends WithApplication {
         assertEquals(OK, result.status());
     }
 
+    @Test
+    public void testLogin(){
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/login");
+
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+
 }
