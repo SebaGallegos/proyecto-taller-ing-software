@@ -10,6 +10,8 @@ GET     /index                      controllers.HomeController.index()
 GET     /login                       controllers.LoginController.showLoginForm(request: Request)
 POST    /login                       controllers.LoginController.processLogin(request: Request)
 GET     /logout                      controllers.LoginController.logout(request: Request)
+GET     /register                   controllers.RegisterController.showRegistrationForm(request: Request)
+POST    /register                   controllers.RegisterController.processRegistration(request: Request)
 
 # productos
 GET     /detalle                    controllers.RoutesController.phone()
