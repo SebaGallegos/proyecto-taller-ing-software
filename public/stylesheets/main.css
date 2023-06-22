@@ -28,12 +28,12 @@
 }
 
 .navbar{
-    background-color: rgba(0, 0, 0, 0); /* Cambia el color de fondo a negro con 50% de transparencia */
+    background-color: rgba(0, 0, 0, 0);
 
 }
 .card{
     background: rgb(2,0,36);
-    background: linear-gradient(265deg, rgba(2,0,36,1) 0%, rgba(171,178,40,1) 0%, rgba(217,165,165,0.23993347338935578) 26%, rgba(0,212,255,1) 94%);
+    background: linear-gradient(265deg, rgba(2,0,36,1) 0%, rgba(171,178,40,1) 0%, rgba(217,165,165,1) 26%, rgba(0,212,255,1) 94%);
     border: 2px solid rgb(15, 209, 232);
 }
 
@@ -42,13 +42,13 @@
     color: #000000;
     background: rgb(2,0,36);
     background: linear-gradient(265deg, rgba(2,0,36,1) 0%, rgba(171,178,40,1) 0%, rgba(217,165,165,1) 26%, rgba(0,212,255,1) 94%);
-    padding: 10px; /* Aumenta el tamaño del fondo agregando un relleno de 10px */
-    border-radius: 10px; /* Agrega bordes redondeados de 10px */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .navbar-brand {
-    color: #FFFFFF; /* Cambia el color del enlace a blanco */
-    font-weight: bold; /* Aplica un grosor adicional a la letra */
+    color: #FFFFFF;
+    font-weight: bold;
 
 }
 .navbar-brand:hover{
@@ -56,5 +56,5 @@
 }
 .navbar-brand:active,
 .navbar-brand:focus {
-    color: #FFFFFF; /* Cambia el color del enlace a blanco */
+    color: #FFFFFF;
 }
