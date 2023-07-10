@@ -37,7 +37,7 @@ public class LoginController extends Controller{
         }
     }
 
-    //@Security.Authenticated(Secured.class)
+    @Security.Authenticated(Secured.class)
     public Result logout(Http.Request request){
         return redirect(routes.LoginController.showLoginForm()).removingFromSession(request, "connected");
     }

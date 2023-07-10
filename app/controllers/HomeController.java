@@ -11,7 +11,7 @@ public class HomeController extends Controller{
 
     }
 
-    //@Security.Authenticated(Secured.class)
+    @Security.Authenticated(Secured.class)
     public Result index(){
         return ok(views.html.index.render());
     }

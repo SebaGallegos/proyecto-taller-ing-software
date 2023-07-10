@@ -24,7 +24,6 @@ public class RegisterController extends Controller {
         return ok(views.html.register.render(form, request, messagesApi.preferred(request)));
     }
 
-
     public Result processRegistration(Http.Request request) {
         Form<UserProcess> form = formFactory.form(UserProcess.class).bindFromRequest(request);
         UserProcess user = form.get();
