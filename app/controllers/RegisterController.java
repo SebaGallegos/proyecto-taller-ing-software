@@ -30,6 +30,7 @@ public class RegisterController extends Controller {
         UserProcess user = form.get();
 
         User newUser = new User();
+        newUser.name = user.getName();
         newUser.email = user.getEmail();
         newUser.password = user.getPassword();
         newUser.save();
