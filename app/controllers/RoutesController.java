@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Oferta;
+import models.User;
 import play.data.Form;
 import play.data.FormFactory;
 import play.i18n.MessagesApi;
@@ -10,6 +11,7 @@ import play.mvc.Controller;
 import play.mvc.Security;
 
 import javax.inject.Inject;
+import java.util.Optional;
 
 public class RoutesController extends Controller{
 
@@ -49,12 +51,32 @@ public class RoutesController extends Controller{
         OfertaProcess ofertaForm = form.get();
 
         Oferta newOferta = new Oferta();
-        newOferta.idEmpresaCHI = ofertaForm.getIdEmpresaCHI();
-        newOferta.idEmpresaEXT = ofertaForm.getIdEmpresaEXT();
-        newOferta.detalle = ofertaForm.getDetalle();
-        newOferta.save();
+        if (getIDfromDB(req) != -1) {
+            newOferta.idEmpresaCHI = ofertaForm.getIdEmpresaCHI();
+            newOferta.idEmpresaEXT = getIDfromDB(req);
+            newOferta.detalle = ofertaForm.getDetalle();
+            newOferta.save();
 
-        return redirect(routes.HomeController.index());
-
+            return redirect(routes.HomeController.index());
+        } else {
+            return redirect(routes.RoutesController.mostrarFormOferta());
+        }
     }
+
+    @Security.Authenticated(Secured.class)
+    private int getIDfromDB(Http.Request req) {
+        Optional<String> connected = req.session().get("connected");
+        if (connected.isPresent()) {
+            String email = connected.get();
+            User user = User.find.query().where()
+                    .eq("email", email)
+                    .findOne();
+
+            if (user != null) {
+                return user.id;
+            }
+        }
+        return -1;
+    }
+
 }
