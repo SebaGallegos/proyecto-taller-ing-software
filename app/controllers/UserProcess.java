@@ -4,7 +4,7 @@ import play.data.validation.Constraints;
 
 public class UserProcess {
     @Constraints.Required protected String email;
-    protected String name;
+    protected String nombre;
     protected String password;
 
     public UserProcess(){
@@ -27,7 +27,11 @@ public class UserProcess {
         return password;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

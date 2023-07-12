@@ -15,6 +15,9 @@ GET     /detalle                    controllers.RoutesController.phone()
 GET     /detalle2                    controllers.RoutesController.spidey()
 GET     /detalle3                    controllers.RoutesController.leon()
 
+GET     /oferta                     controllers.RoutesController.mostrarFormOferta(req: Request)
+POST     /oferta                     controllers.RoutesController.enviarOferta(req: Request)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
