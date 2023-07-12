@@ -49,6 +49,17 @@
                     Esperamos con entusiasmo recibir sus cotizaciones y ofertas para este emocionante proyecto.<br><br>
                     ¡Gracias por su atención y esperamos una colaboración exitosa!</p>
                 <div class="container2">
+
+                    <body>
+                    <button onclick="abrirPDF()">Mostrar Ficha</button>
+
+                    <script>
+                        function abrirPDF() {
+                            window.open("@routes.Assets.versioned("archives/ficha_spidy.pdf")", "_blank");
+                        }
+                    </script>
+                    </body>
+
                     <button class="btn btn-personal" id="button">Enviar Oferta</button>
                 </div>
             </div>
