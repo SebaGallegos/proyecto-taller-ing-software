@@ -8,7 +8,7 @@ public class User extends Model{
 
     @Id
     public int id;
-    public String name;
+    public String nombre;
     public String email;
     public String password;
 

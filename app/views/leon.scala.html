@@ -1,4 +1,4 @@
-@main("leon"){
+@main("Spidey"){
 
 
 <!DOCTYPE html>
@@ -48,18 +48,7 @@
                     Esperamos con entusiasmo recibir sus cotizaciones y ofertas para este emocionante proyecto.<br><br>
                     ¡Gracias por su atención y esperamos una colaboración exitosa!</p>
                 <div class="container2">
-
-                    <body>
-                    <button onclick="abrirPDF()">Mostrar Ficha</button>
-
-                    <script>
-                        function abrirPDF() {
-                            window.open("@routes.Assets.versioned("archives/ficha_leon.pdf")", "_blank");
-                        }
-                    </script>
-                    </body>
-
-                    <button class="btn btn-personal" id="button">Enviar Oferta</button>
+                    <a class="btn btn-personal" href="@routes.RoutesController.mostrarFormOferta3()" role="button" id="button">Enviar oferta</a>
                 </div>
             </div>
         </div>

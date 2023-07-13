@@ -12,7 +12,7 @@ public class LoginController extends Controller{
 
     private final FormFactory formFactory;
     private MessagesApi messagesApi;
-
+    
     @Inject
     public LoginController(FormFactory formFactory, MessagesApi messagesApi){
         this.formFactory = formFactory;
@@ -39,7 +39,7 @@ public class LoginController extends Controller{
 
     @Security.Authenticated(Secured.class)
     public Result logout(Http.Request request){
-        return redirect(routes.LoginController.showLoginForm()).removingFromSession(request, "connected");
+        return redirect(routes.LoginController.showLoginForm()).withNewSession();
     }
 
     private boolean verify(String email, String password){
