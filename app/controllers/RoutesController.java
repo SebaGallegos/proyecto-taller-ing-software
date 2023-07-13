@@ -40,9 +40,21 @@ public class RoutesController extends Controller{
     }
 
     @Security.Authenticated(Secured.class)
-    public Result mostrarFormOferta(Http.Request req){
+    public Result mostrarFormOferta1(Http.Request req){
         Form<OfertaProcess> form = formFactory.form(OfertaProcess.class);
-        return ok(views.html.oferta.render(form, req, messagesApi.preferred(req)));
+        return ok(views.html.oferta1.render(form, req, messagesApi.preferred(req)));
+    }
+
+    @Security.Authenticated(Secured.class)
+    public Result mostrarFormOferta2(Http.Request req){
+        Form<OfertaProcess> form = formFactory.form(OfertaProcess.class);
+        return ok(views.html.oferta2.render(form, req, messagesApi.preferred(req)));
+    }
+
+    @Security.Authenticated(Secured.class)
+    public Result mostrarFormOferta3(Http.Request req){
+        Form<OfertaProcess> form = formFactory.form(OfertaProcess.class);
+        return ok(views.html.oferta3.render(form, req, messagesApi.preferred(req)));
     }
 
     @Security.Authenticated(Secured.class)
@@ -59,7 +71,7 @@ public class RoutesController extends Controller{
 
             return redirect(routes.HomeController.index());
         } else {
-            return redirect(routes.RoutesController.mostrarFormOferta());
+            return redirect(routes.HomeController.index());
         }
     }
 
