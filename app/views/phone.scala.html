@@ -1,4 +1,4 @@
-@main("Juguete"){
+@main("telefono"){
 
 
 <!DOCTYPE html>
@@ -65,6 +65,15 @@
                     Esperamos con entusiasmo recibir sus cotizaciones y ofertas para este emocionante proyecto. <br><br>
                     ¡Gracias por su atención y esperamos una colaboración exitosa!</p>
                 <div class="container2">
+                    <body>
+                        <a class="btn btn-personal" onclick="abrirPDF()" role="button" id="button">Mostrar ficha</a>
+
+                        <script>
+                                function abrirPDF(){
+                                    window.open("@routes.Assets.versioned("archives/ficha_telefono.pdf")", "_blank");
+                                }
+                        </script>
+                    </body>
                     <a class="btn btn-personal" href="@routes.RoutesController.mostrarFormOferta1()" role="button" id="button">Enviar oferta</a>
                 </div>
             </div>
